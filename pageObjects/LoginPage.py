@@ -21,5 +21,5 @@ class LoginPage:
     def clickLogout(self):
         self.driver.find_elemnet_by_link_text(self.link_logout_linktext).click()
 
-
+asdd
 
