@@ -1,0 +1,27 @@
+============================= test session starts =============================
+platform win32 -- Python 3.8.2, pytest-6.2.1, py-1.10.0, pluggy-0.13.1 -- c:\users\cyperts\pycharmprojects\nopcommerce\venv\scripts\python.exe
+cachedir: .pytest_cache
+metadata: {'Python': '3.8.2', 'Platform': 'Windows-10-10.0.18362-SP0', 'Packages': {'pytest': '6.2.1', 'py': '1.10.0', 'pluggy': '0.13.1'}, 'Plugins': {'forked': '1.3.0', 'html': '3.1.1', 'metadata': '1.11.0', 'xdist': '2.2.0'}}
+rootdir: C:\Users\cyperts\PycharmProjects\nopcommerce
+plugins: forked-1.3.0, html-3.1.1, metadata-1.11.0, xdist-2.2.0
+collecting ... collected 2 items
+
+testCases/test_login.py::Test_001_Login::test_homePageTitle PASSED
+testCases/test_login.py::Test_001_Login::test_login FAILED
+
+================================== FAILURES ===================================
+__________________________ Test_001_Login.test_login __________________________
+
+self = <testCases.test_login.Test_001_Login object at 0x00000154C220A3A0>
+
+    def test_login(self):
+        self.driver = webdriver.Chrome()
+        self.driver.get(self.baseurl)
+        self.lp = LoginPage(self.driver)
+>       self.driver.find_elemnet_by_id(self.textbox_username_id).clear()
+E       AttributeError: 'WebDriver' object has no attribute 'find_elemnet_by_id'
+
+testCases\test_login.py:26: AttributeError
+=========================== short test summary info ===========================
+FAILED testCases/test_login.py::Test_001_Login::test_login - AttributeError: ...
+======================== 1 failed, 1 passed in 16.09s =========================
